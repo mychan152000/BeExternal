@@ -1,146 +1,131 @@
-/***    General     ***/
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Roboto", sans-serif
+.app {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #f8f9fd;
 }
 
-body {
-    margin: 0 auto
+input[type="text"],
+input[type="password"] {
+  height: 25px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.m-5-auto {
-    margin: 5rem auto
+input[type="submit"] {
+  margin-top: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  background: #FFD600;
+  border: 1px solid #FFD600;
+  color: #000000;
+  padding: 10px 20px;
 }
 
-.primary-button {
-    margin-top: 5rem;
-    margin-right: 1rem;
-    padding: .6rem;
-    width: 10rem;
-    background: #222;
-    border: none;
-    color: #fff;
-    font-size: 1.2rem;
-    transition: all .5s;
+input[type="submit"]:hover {
+  background: #FFD600;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.list-container {
+  display: flex;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 10px;
+}
+.app {
+    font-family: sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    background-color: #f8f9fd;
+
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="submit"] {
+    margin-top: 10px;
     cursor: pointer;
-    text-transform: capitalize
-}
-
-/***    Landing Page     ***/
-.main-title,
-.main-para {
+    font-size: 15px;
+    background: #FFD600;
+    border: 1px solid #FFD600;
     color: #000000;
+    padding: 10px 20px;
     font-weight: 800;
-    text-decoration: underline;
-}
-
-.main-title {
-    padding-top: 10rem;
-    font-size: 5rem;
-    font-family: 'Fascinate', cursive;
-    text-transform: uppercase
-}
-
-.main-para {
-    font-size: 2.5rem;
-    text-Transform: capitalize;
-    padding-top: 20%;
-}
-
-#reg_btn span {
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-#reg_btn span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-}
-
-#reg_btn:hover span {
-  padding-right: 25px;
-}
-
-#reg_btn:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-/***    Login Page     ***/
-h2 {
-    font-weight: 300
-}
-
-form {
-    display: inline-block;
-    background: #f3f3f3;
-    border: 1px solid #ddd;
-    border-radius: 2px;
+  }
+  
+  input[type="submit"]:hover {
+    background: #6cf0c2;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .login-form {
+    background-color: white;
     padding: 2rem;
-    margin: 2rem 0 1rem 0
-}
-
-form label {
-    float: left;
-    font-size: .9rem;
-    margin: 0;
-    padding: 0
-}
-
-.right-label {
-    float: right;
-    cursor: pointer
-}
-
-input {
-    width: 15rem;
-    padding: .3rem;
-    border-radius: 5px;
-    outline: none;
-    border: none
-}
-
-#sub_btn {
-    display: block;
-    width: 100%;
-    padding: .3rem;
-    border: none;
-    background: #222;
-    color: #fff;
-    border-radius: 3px;
-}
-
-#sub_btn:hover {
-    background: #333;
-    transition: all .5s
-}
-
-footer p {
-    margin: 0;
-    font-size: .9rem
-}
-
-/***    Register Page     ***/
-#checkbox {
-    width: 1rem
-}
-
-form span {
-    font-size: .8rem
-}
-
-#reset_pass_lbl {
-    float: left
-}
-
-/***    Home Page     ***/
-.home-page-title {
-    color: #222
-}
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-right: 100px;
+    height: 500px;
+  }
+  
+  .list-container {
+    display: flex;
+  }
+  
+  .error {
+    color: red;
+    font-size: 12px;
+  }
+  
+  .title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 10px;
+  }
