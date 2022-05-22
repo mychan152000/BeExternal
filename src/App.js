@@ -14,11 +14,14 @@ export default function App() {
         <Router>
             <div>
                 <Switch>
-                    <Route exact path="/" component={ LandingPage } />
+                    { localStorage.getItem("isLogin") === null ? 
+                        <Route exact path="/" component={ LandingPage } /> :
+                        <Route path="/" component={ HomePage } /> 
+                    }
                     <Route path="/login" component={ LoginPage } />
                     <Route path="/register" component={ RegisterPage } />
                     <Route path="/forget-password" component={ ForgetPasswordPage } />
-                    <Route path="/home" component={ HomePage } />
+                    
                 </Switch>
                 {/* <Footer /> */}
             </div>

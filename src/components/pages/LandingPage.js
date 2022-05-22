@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import axios from 'axios';
 
 import "../../App.css"
 
@@ -35,8 +36,11 @@ export default function LandingPage() {
       if (userData.password !== pass.value) {
         // Invalid password
         setErrorMessages({ name: "pass", message: errors.pass });
+
       } else {
         setIsSubmitted(true);
+        localStorage.setItem("isLogin", "true");
+        window.location.reload();
       }
     } else {
       // Username not found
